@@ -1,0 +1,16 @@
+net: "models/supervision_model/SO_RCL_train_val.prototxt"
+#base_lr: 4e-06 paper setting
+base_lr: 4e-06
+lr_policy: "step"
+#test_iter: 150
+#test_interval: 500
+gamma: 0.5
+stepsize: 5000
+display: 50
+max_iter: 100000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 2500
+snapshot_prefix: "/disk2/zhangyu/supervision/with_CAM/snap/round5/r5_CAM_wt"
+solver_mode: GPU
+

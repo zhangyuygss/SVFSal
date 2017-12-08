@@ -1,0 +1,13 @@
+net: "SO_RCL_train_val.prototxt"
+base_lr: 4e-6
+lr_policy: "step"
+gamma: 0.5
+stepsize: 5000
+display: 5000
+max_iter: 100000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "/disk1/zhangyu/ICCV/snap/mbs/mbs"
+solver_mode: GPU
+device_id: 1
