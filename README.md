@@ -13,7 +13,7 @@ Read our paper [here](http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhan
 
 1. Clone the repository
 
-   `git clone https://github.com/zhangyuygss/SVFSal.git  `
+   `git clone https://github.com/zhangyuygss/SVFSal.caffe.git  `
 
 2. `cd` into the directory you cloned, let's call it `SVFS_ROOT`
 
