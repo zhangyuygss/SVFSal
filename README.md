@@ -33,7 +33,7 @@ Read our paper [here](http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhan
 
    After running demo code, you should find the output saliency map from `SVFS_ROOT/data/output`. Put your images into `SVFS_ROOT/data/images` if you want to run on your own dataset.
 
-   If you would like to download our saliency map results, you can also find them [here](https://pan.baidu.com/s/1gfCOxkJ)  via baidu pan or  [here](https://drive.google.com/open?id=1U04GTkN7KkNFDgT4iUqspJote7QYqGiG) via google drive.
+   If you would like to download our saliency map results, you can also find them [here](https://drive.google.com/open?id=1U04GTkN7KkNFDgT4iUqspJote7QYqGiG) via google drive or [here](https://pan.baidu.com/s/1gfCOxkJ).
 
 ### Training and evaluation
 
@@ -45,7 +45,7 @@ Read our paper [here](http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhan
 Cite our paper with:
 
 ```bibtex
-@INPROCEEDINGS{DZhang2017FSVSal,
+@INPROCEEDINGS{DZhang2017SVFSal,
 	author = {Dingwen, Zhang and Junwei, Han and Yu, Zhang},
 	title = {Supervision by fusion: towards unsupervised learning of deep salient object detector},
 	booktitle = {ICCV},
