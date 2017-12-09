@@ -44,5 +44,12 @@ Read our paper [here](http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhan
 
 Cite our paper with:
 
-`Citation`
+```bibtex
+@INPROCEEDINGS{DZhang2017FSVSal,
+	author = {Dingwen, Zhang and Junwei, Han and Yu, Zhang},
+	title = {Supervision by fusion: towards unsupervised learning of deep salient object detector},
+	booktitle = {ICCV},
+	year = {2017}
+}
+```
 
