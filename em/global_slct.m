@@ -1,5 +1,5 @@
 %% 从global em的结果中选择难度较低的图像做下次训练用
-function global_slct(roundnumber, select_rate, savePath, salpath, emrst_dir, CAM_wt, imgPath)
+function global_slct(roundnumber, select_rate, savePath, salpath, emrst_dir, imgPath)
 	%% savePath: directory to save selected pictures
 	%% salpath: Original saliency maps to be selected
 	%% emrst_dir: Directory to save em results
@@ -9,7 +9,7 @@ function global_slct(roundnumber, select_rate, savePath, salpath, emrst_dir, CAM
 	% savePath = ['/disk1/zhangyu/ICCV/selectedSal/round' num2str(roundnumber) '/'];
 	load([emrst_dir 'globalEmResult' num2str(roundnumber) '.mat'], ...
 		'labelerStats', 'imageStats', 'imglist', 'modelnum');
-	load(CAM_wt, 'std_dic', 'threshold_dic');
+	% load(CAM_wt, 'std_dic', 'threshold_dic');
 	% k = 0.53			% select rate
 	k = select_rate;
 
@@ -20,7 +20,7 @@ function global_slct(roundnumber, select_rate, savePath, salpath, emrst_dir, CAM
 	m = length(imgId);		% saliency number
 
 	% Add CAM weight
-	imgBeta = addCAMGlbWeight(imgBeta, std_dic, imglist{1});
+	% imgBeta = addCAMGlbWeight(imgBeta, std_dic, imglist{1});
 
 	sortedBeta = sort(imgBeta, 'descend');
 	threshold = sortedBeta(round(k*m));

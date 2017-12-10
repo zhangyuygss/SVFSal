@@ -1,4 +1,4 @@
-function local_fusion(roundnumber, selectdir, atMapDir, gen_fullweight, savelocweight, emrst_dir)
+function local_fusion(roundnumber, selectdir, gen_fullweight, savelocweight, emrst_dir)
 	%% gen_fullweight: 1: Add global weight and local weight 2: Add local weight only
 
     % roundnumber = 5;
@@ -35,11 +35,11 @@ function local_fusion(roundnumber, selectdir, atMapDir, gen_fullweight, savelocw
 
 		[localSal, betas, labelerStats]= local_em(im, sals, priorBeta);
 
-		% attention map weight
-		at_map = imread([atMapDir, imgname(1:end-4), '.png']);
-		[h, w, ch] = size(im);
-		at_map = mat2gray(imresize(at_map, [h, w]));
-		betas = addCAMLocWeight(at_map, betas);
+		% % attention map weight
+		% at_map = imread([atMapDir, imgname(1:end-4), '.png']);
+		% [h, w, ch] = size(im);
+		% at_map = mat2gray(imresize(at_map, [h, w]));
+		% betas = addCAMLocWeight(at_map, betas);
 
 		labeler = labelerStats{2};
 		Asum = Asum + mean(labeler);

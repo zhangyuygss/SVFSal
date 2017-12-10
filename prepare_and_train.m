@@ -29,9 +29,9 @@ disp('Running global em...')
 selectdir = [rootpath 'selectedSal/round' num2str(roundnumber) '/' ];
 tr_img = ['/disk2/zhangyu/data/saliency/' trDataset '/images/'];
 disp('Running global select...');
-    global_slct(roundnumber, selectRate, selectdir, salsrootdir, emrst_dir, CAM_wt, tr_img);
+    global_slct(roundnumber, selectRate, selectdir, salsrootdir, emrst_dir, tr_img);
 disp('Running local fusion...');
-    local_fusion(roundnumber, selectdir, atMapDir, 1, 1, emrst_dir);
+    local_fusion(roundnumber, selectdir, 1, 1, emrst_dir);
 
 select_imgdir = [selectdir 'img/'];
 select_maskdir = [selectdir 'mask/']; mkdir(select_maskdir);
@@ -43,7 +43,7 @@ genweight = 1;
 weightpath = [emrst_dir 'loss_weight' num2str(roundnumber) '.mat'];
 maskpath = [rootpath 'masks/round' num2str(roundnumber) '/'];
 disp('Fusing global and local saliencys...');
-    mean_img(selectdir, atMapDir, mean_saldir);
+    mean_img(selectdir, mean_saldir);
 if(use_mean)
     data_enhance(select_imgdir, mean_saldir, ...
         enhanced_maskdir, genweight, weightpath, maskpath, trDataset);
