@@ -1,5 +1,16 @@
 ## Supervision by Fusion: Towards Unsupervised Learning of Deep Salient Object Detector
 
+### What's new
+We add a Pytorch inference demo for Pytorch users!
+We convert the caffe inference prototxt and weights into pytorch model.
+The conversion codes are modified from 
+[caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch).
+
+#### Usage
+Change the image directory in *demo_pytorch.py*, them run the script,
+you'll get saliency maps in `data/output`.
+
+
 Read our paper [here](http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhang_Supervision_by_Fusion_ICCV_2017_paper.pdf) .
 
 ![Arch](https://zhangyuygss.github.io/uploads/SVFSal_Arch.png)
@@ -45,6 +56,16 @@ Read our paper [here](http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhan
 Cite our paper with:
 
 ```bibtex
+@article{zhang2019synthesizing,
+  title={Synthesizing supervision for learning deep saliency network without human annotation},
+  author={Zhang, Dingwen and Han, Junwei and Zhang, Yu and Xu, Dong},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={42},
+  number={7},
+  pages={1755--1769},
+  year={2019},
+  publisher={IEEE}
+}
 @INPROCEEDINGS{DZhang2017SVFSal,
 	author = {Dingwen, Zhang and Junwei, Han and Yu, Zhang},
 	title = {Supervision by fusion: towards unsupervised learning of deep salient object detector},
